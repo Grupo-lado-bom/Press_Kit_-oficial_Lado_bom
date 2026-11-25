@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080808">
+  <meta name="description" content="Press Kit Digital do Grupo Lado Bom — O Lado B do Samba. Shows de samba e pagode em São Paulo e região.">
+  <title>Grupo Lado Bom | Press Kit Digital</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/logo-lado-bom.webp" type="image/webp">
+  <link rel="preload" as="image" href="assets/foto-grupo.webp">
+  <style>
+    :root {
+      --black: #080808;
+      --black-soft: #111111;
+      --panel: #171717;
+      --gold: #d4a943;
+      --gold-light: #f0d58a;
+      --white: #f7f4ed;
+      --muted: #c4beb1;
+      --line: rgba(212,169,67,.28);
+      --display: 'Cormorant Garamond', Georgia, serif;
+      --body: 'Outfit', Arial, sans-serif;
+      --shadow: 0 18px 55px rgba(0,0,0,.42);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 82px; }
+    body { margin: 0; background: var(--black); color: var(--white); font-family: var(--body); line-height: 1.65; }
+    a { color: inherit; text-decoration: none; }
+    img, video { max-width: 100%; display: block; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    .topbar { position: sticky; top: 0; z-index: 20; background: rgba(8,8,8,.91); border-bottom: 1px solid var(--line); backdrop-filter: blur(14px); }
+    .nav-wrap { max-width: 1180px; margin: auto; min-height: 72px; padding: 10px 26px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand-small { display: flex; align-items: center; gap: 11px; min-width: 190px; }
+    .brand-small img { width: 48px; height: 48px; object-fit: contain; }
+    .brand-small span { font-size: 12px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--gold-light); line-height: 1.25; }
+    .nav-links { display: flex; align-items: center; justify-content: flex-end; gap: clamp(14px,2.4vw,30px); flex-wrap: wrap; }
+    .nav-links a { font-size: 12px; letter-spacing: .11em; text-transform: uppercase; color: #e4dfd4; transition: color .2s ease; }
+    .nav-links a:hover { color: var(--gold-light); }
+    .nav-links .nav-cta { border: 1px solid var(--gold); color: var(--gold-light); border-radius: 999px; padding: 9px 16px; }
+    .hero { min-height: min(850px, calc(100svh - 72px)); position: relative; display: flex; justify-content: center; align-items: flex-end; overflow: hidden; isolation: isolate; background: #101010; }
+    .hero-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 42%; z-index: -2; }
+    .hero::before { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(0,0,0,.38) 0%, rgba(0,0,0,.45) 38%, rgba(0,0,0,.88) 77%, #080808 100%), linear-gradient(90deg, rgba(0,0,0,.2), transparent 50%, rgba(0,0,0,.22)); }
+    .hero-content { width: min(760px,100%); padding: 65px 24px 74px; text-align: center; display: flex; flex-direction: column; align-items: center; }
+    .hero-logo { width: clamp(145px, 21vw, 235px); height: auto; filter: drop-shadow(0 12px 25px rgba(0,0,0,.55)); margin-bottom: 5px; }
+    .eyebrow { color: var(--gold-light); text-transform: uppercase; letter-spacing: .28em; font-size: 11px; font-weight: 600; }
+    h1, h2, h3, p { margin-top: 0; }
+    .hero h1 { font-family: var(--display); text-transform: uppercase; font-size: clamp(42px,7vw,76px); line-height: .94; letter-spacing: .055em; margin: 8px 0 12px; font-weight: 700; text-shadow: 0 5px 24px rgba(0,0,0,.7); }
+    .hero-sub { color: var(--gold-light); font-size: clamp(12px,1.7vw,16px); letter-spacing: .26em; text-transform: uppercase; font-weight: 600; }
+    .hero-copy { max-width: 520px; color: #e8e3d8; font-size: 15px; margin: 12px auto 26px; }
+    .button { display: inline-flex; align-items: center; justify-content: center; gap: 10px; border-radius: 999px; padding: 14px 26px; min-height: 50px; text-transform: uppercase; letter-spacing: .12em; font-size: 12px; font-weight: 700; transition: transform .2s ease, box-shadow .2s ease, background .2s ease; }
+    .button:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(212,169,67,.22); }
+    .button-gold { background: linear-gradient(135deg, #f0d58a, #c8942d); color: #100d07; }
+    .button-outline { border: 1px solid var(--gold); color: var(--gold-light); background: rgba(0,0,0,.24); }
+    .hero-social { display: flex; gap: 18px; margin-top: 23px; color: var(--gold-light); font-size: 12px; letter-spacing: .08em; }
+    .hero-social a { opacity: .9; border-bottom: 1px solid transparent; padding-bottom: 2px; }
+    .hero-social a:hover { border-color: var(--gold); opacity: 1; }
+    .section { padding: 94px 24px; }
+    .section.alt { background: linear-gradient(180deg, #111 0%, #0b0b0b 100%); border-top: 1px solid rgba(212,169,67,.11); border-bottom: 1px solid rgba(212,169,67,.11); }
+    .container { max-width: 1100px; margin: 0 auto; }
+    .section-heading { text-align: center; margin: 0 auto 42px; max-width: 700px; }
+    .section-heading .eyebrow { display: block; margin-bottom: 8px; }
+    .section-heading h2 { font-family: var(--display); font-size: clamp(38px,5vw,56px); line-height: 1; color: var(--gold-light); margin-bottom: 14px; font-weight: 600; }
+    .rule { width: 72px; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); margin: 0 auto; }
+    .about-grid { display: grid; grid-template-columns: 1fr .78fr; align-items: center; gap: 48px; }
+    .about-copy { color: #e2ddd3; font-size: 16px; }
+    .about-copy p { margin-bottom: 17px; }
+    .about-quote { color: var(--gold-light); font-family: var(--display); font-size: clamp(30px,4vw,46px); line-height: 1.06; border-left: 2px solid var(--gold); padding: 8px 0 8px 25px; margin: 25px 0 0; }
+    .facts { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; margin-top: 28px; }
+    .fact { border: 1px solid var(--line); background: rgba(212,169,67,.045); padding: 15px 14px; border-radius: 13px; }
+    .fact strong { display: block; color: var(--gold-light); font-family: var(--display); font-size: 24px; line-height: 1.1; margin-bottom: 5px; }
+    .fact span { color: var(--muted); text-transform: uppercase; letter-spacing: .09em; font-size: 10px; }
+    .about-mark { display: flex; justify-content: center; align-items: center; min-height: 350px; }
+    .about-mark img { width: min(100%, 350px); filter: drop-shadow(0 14px 35px rgba(0,0,0,.55)); }
+    .video-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 26px; max-width: 980px; margin: auto; }
+    .video-card { background: #151515; border: 1px solid var(--line); border-radius: 18px; overflow: hidden; box-shadow: var(--shadow); }
+    .video-card video { width: 100%; height: auto; max-height: 720px; aspect-ratio: 9 / 16; object-fit: contain; background: #050505; }
+    .video-info { padding: 19px 20px 21px; }
+    .video-info h3 { font-family: var(--display); font-size: 29px; color: var(--gold-light); margin: 0 0 3px; }
+    .video-info p { color: var(--muted); font-size: 12px; margin: 0; }
+    .format-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 22px; max-width: 850px; margin: auto; }
+    .format-card { position: relative; padding: 34px 30px 30px; border: 1px solid var(--line); border-radius: 17px; background: radial-gradient(circle at top right, rgba(212,169,67,.12), transparent 54%), #141414; text-align: center; }
+    .format-card .format-number { font-family: var(--display); font-size: 42px; color: rgba(212,169,67,.42); line-height: 1; }
+    .format-card h3 { font-family: var(--display); font-size: 34px; color: var(--gold-light); margin: 9px 0 11px; }
+    .format-card p { color: var(--muted); font-size: 14px; max-width: 300px; margin: auto; }
+    .format-note { text-align: center; color: var(--muted); font-size: 13px; margin: 27px auto 0; }
+    .venue-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 16px; max-width: 1000px; margin: auto; }
+    .venue-card { min-height: 92px; display: flex; align-items: center; justify-content: center; text-align: center; padding: 20px 16px; border: 1px solid var(--line); border-radius: 15px; background: radial-gradient(circle at top right, rgba(212,169,67,.10), transparent 58%), #141414; color: var(--gold-light); font-family: var(--display); font-size: clamp(23px,2.7vw,30px); font-weight: 600; line-height: 1.05; letter-spacing: .015em; box-shadow: 0 12px 32px rgba(0,0,0,.22); transition: transform .2s ease, border-color .2s ease, background .2s ease; }
+    .venue-card:hover { transform: translateY(-3px); border-color: rgba(240,213,138,.7); background: radial-gradient(circle at top right, rgba(212,169,67,.16), transparent 58%), #191919; }
+    .venue-card { text-decoration: none; cursor: pointer; }
+    .venue-card:focus-visible { outline: 2px solid var(--gold-light); outline-offset: 4px; }
+    .venue-note { text-align: center; color: var(--muted); font-size: 13px; letter-spacing: .08em; margin: 26px auto 0; }
+    .social-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; }
+    .social-link { min-width: 190px; border: 1px solid var(--line); border-radius: 14px; padding: 17px 22px; background: #141414; display: flex; align-items: center; justify-content: center; gap: 11px; color: var(--gold-light); font-weight: 600; transition: background .2s ease, transform .2s ease; }
+    .social-link:hover { background: #211b0e; transform: translateY(-3px); }
+    .social-link svg { width: 22px; height: 22px; }
+    .contact { padding: 100px 24px 90px; text-align: center; background: radial-gradient(ellipse at center top, rgba(212,169,67,.13), transparent 58%), #080808; }
+    .contact h2 { max-width: 700px; margin: 12px auto 14px; font-family: var(--display); font-size: clamp(40px,6vw,64px); line-height: .98; color: var(--gold-light); }
+    .contact p { color: var(--muted); max-width: 500px; margin: 0 auto 28px; }
+    .whatsapp-line { display: block; color: #e9e1d0; font-size: 14px; margin-top: 17px; letter-spacing: .06em; }
+    footer { border-top: 1px solid var(--line); padding: 24px; color: #928b7c; text-align: center; font-size: 11px; letter-spacing: .08em; }
+    footer strong { color: var(--gold-light); font-weight: 600; }
+    .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    @media (max-width: 760px) {
+      .nav-wrap { padding: 8px 16px; min-height: 66px; align-items: flex-start; }
+      .brand-small { min-width: 0; }
+      .brand-small img { width: 42px; height: 42px; }
+      .brand-small span { font-size: 10px; }
+      .nav-links { gap: 8px 14px; padding-top: 8px; }
+      .nav-links a { font-size: 10px; }
+      .nav-links .nav-cta { padding: 6px 10px; }
+      .hero { min-height: 760px; min-height: min(850px, calc(100svh - 66px)); }
+      .hero-photo { object-position: center center; }
+      .hero-content { padding-bottom: 55px; }
+      .section { padding: 72px 20px; }
+      .about-grid { grid-template-columns: 1fr; gap: 28px; }
+      .about-mark { min-height: 0; grid-row: 1; }
+      .about-mark img { width: min(54vw, 230px); }
+      .facts { grid-template-columns: 1fr; }
+      .venue-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px; }
+      .venue-card { min-height: 82px; padding: 16px 10px; font-size: 25px; }
+      .fact { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+      .fact strong { margin: 0; }
+    }
+    @media (max-width: 520px) {
+      .nav-wrap { display: block; }
+      .brand-small { justify-content: center; margin-bottom: 7px; }
+      .nav-links { justify-content: center; padding: 2px 0 4px; }
+      .nav-links a { font-size: 9px; letter-spacing: .08em; }
+      .hero { min-height: 700px; }
+      .hero-logo { width: 155px; }
+      .hero-copy { font-size: 13px; }
+      .hero-social { gap: 14px; font-size: 10px; }
+      .video-grid, .format-grid { grid-template-columns: 1fr; max-width: 420px; }
+      .venue-grid { grid-template-columns: 1fr 1fr; max-width: 420px; }
+      .venue-card { min-height: 76px; font-size: 23px; }
+      .video-card video { max-height: 650px; }
+      .social-link { width: 100%; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+      .reveal { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="nav-wrap">
+      <a class="brand-small" href="#inicio" aria-label="Grupo Lado Bom - início">
+        <img src="assets/logo-lado-bom.webp" alt="Logo Grupo Lado Bom">
+        <span>Grupo<br>Lado Bom</span>
+      </a>
+      <nav class="nav-links" aria-label="Navegação principal">
+        <a href="#sobre">O grupo</a>
+        <a href="#videos">Vídeos</a>
+        <a href="#palcos">Palcos</a>
+        <a href="#shows">Shows</a>
+        <a href="#redes">Redes</a>
+        <a class="nav-cta" href="#contato">Contratação</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio" aria-label="Grupo Lado Bom">
+      <img class="hero-photo" src="assets/foto-grupo.webp" alt="Integrantes do Grupo Lado Bom reunidos com seus instrumentos">
+      <div class="hero-content">
+        <img class="hero-logo" src="assets/logo-lado-bom.webp" alt="Emblema oficial Grupo Lado Bom — O Lado Bom do Samba">
+        <span class="eyebrow">Samba • Pagode • São Paulo - SP</span>
+        <h1>Grupo Lado Bom</h1>
+        <div class="hero-sub">O Lado B do Samba</div>
+        <p class="hero-copy">Música, amizade e a energia do samba e do pagode em apresentações feitas para celebrar com o público.</p>
+        <a class="button button-gold" href="https://wa.me/5511992122296?text=Ol%C3%A1!%20Vi%20o%20Press%20Kit%20Digital%20do%20Grupo%20Lado%20Bom%20e%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20contrata%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.86 11.86 0 0 0 12.08 0C5.5 0 .15 5.35.15 11.93c0 2.1.55 4.15 1.6 5.96L.05 24l6.27-1.65a11.9 11.9 0 0 0 5.75 1.47h.01c6.58 0 11.93-5.35 11.93-11.93 0-3.19-1.24-6.19-3.49-8.41ZM12.08 21.8h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.72.98.99-3.63-.24-.37a9.88 9.88 0 0 1-1.52-5.26c0-5.47 4.45-9.92 9.91-9.92 2.65 0 5.14 1.03 7.01 2.91a9.86 9.86 0 0 1 2.9 7.01c0 5.47-4.45 9.87-9.92 9.87Zm5.44-7.41c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.1 4.49.71.3 1.27.49 1.7.63.72.23 1.37.2 1.88.12.58-.09 1.76-.72 2.01-1.42.25-.7.25-1.29.17-1.42-.07-.13-.27-.2-.57-.35Z"/></svg>
+          Contratar show
+        </a>
+        <div class="hero-social" aria-label="Redes sociais">
+          <a href="https://www.instagram.com/ogrupoladobom/" target="_blank" rel="noopener noreferrer">INSTAGRAM</a>
+          <a href="https://www.tiktok.com/@grupo.lado.bom" target="_blank" rel="noopener noreferrer">TIKTOK</a>
+          <a href="https://www.youtube.com/@GrupoLadoBom" target="_blank" rel="noopener noreferrer">YOUTUBE</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="sobre">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Quem somos</span>
+          <h2>Sobre o Grupo</h2>
+          <div class="rule"></div>
+        </div>
+        <div class="about-grid">
+          <div class="about-copy reveal">
+            <p>O <strong>Grupo Lado Bom</strong> é um grupo de samba e pagode de São Paulo, formado em 2025 por amigos de longa data que compartilham a paixão pela música e pela cultura do samba.</p>
+            <p>Com o conceito <strong>“O Lado B do Samba”</strong>, o grupo apresenta um repertório que resgata a nostalgia e a força do pagode dos anos 1990, com referências de grandes nomes como Fundo de Quintal, Reinaldo, Revelação e Art Popular.</p>
+            <p>Com personalidade, alegria e conexão com o público, o Grupo Lado Bom leva aos palcos um show envolvente, valorizando a essência do samba e do pagode.</p>
+            <div class="facts" aria-label="Informações do grupo">
+              <div class="fact"><strong>2025</strong><span>Ano de formação</span></div>
+              <div class="fact"><strong>2–3h</strong><span>Duração do show</span></div>
+              <div class="fact"><strong>SP</strong><span>São Paulo</span></div>
+            </div>
+          </div>
+          <div class="about-mark reveal">
+            <img src="assets/logo-lado-bom.webp" alt="Emblema do Grupo Lado Bom">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="videos">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Ao vivo</span>
+          <h2>Vídeos e Apresentações</h2>
+          <div class="rule"></div>
+        </div>
+        <div class="video-grid">
+          <article class="video-card reveal">
+            <video controls playsinline preload="metadata" poster="assets/video-principal-poster.jpg">
+              <source src="assets/video-principal.mp4" type="video/mp4">
+              Seu navegador não consegue reproduzir este vídeo.
+            </video>
+            <div class="video-info">
+              <h3>Um pouco do nosso som</h3>
+              <p>Grupo Lado Bom • Apresentação ao vivo</p>
+            </div>
+          </article>
+          <article class="video-card reveal">
+            <video controls playsinline preload="metadata" poster="assets/video-secundario-poster.jpg">
+              <source src="assets/video-secundario.mp4" type="video/mp4">
+              Seu navegador não consegue reproduzir este vídeo.
+            </video>
+            <div class="video-info">
+              <h3>Mais do Lado Bom</h3>
+              <p>Grupo Lado Bom • Apresentação</p>
+            </div>
+          </article>
+          <article class="video-card reveal">
+            <video controls playsinline preload="metadata" poster="assets/participacao-especial-ao-vivo-poster.jpg">
+              <source src="assets/participacao-especial-ao-vivo.mp4" type="video/mp4">
+              Seu navegador não consegue reproduzir este vídeo.
+            </video>
+            <div class="video-info">
+              <h3>Participação Especial</h3>
+              <p>Grupo Lado Bom • Encontro ao vivo</p>
+            </div>
+          </article>
+          <article class="video-card reveal">
+            <video controls playsinline preload="metadata" poster="assets/participacao-especial-resenha-poster.jpg">
+              <source src="assets/participacao-especial-resenha.mp4" type="video/mp4">
+              Seu navegador não consegue reproduzir este vídeo.
+            </video>
+            <div class="video-info">
+              <h3>Participação Especial</h3>
+              <p>Grupo Lado Bom • Resenha musical</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="palcos">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Nossa trajetória</span>
+          <h2>Palcos e Eventos</h2>
+          <div class="rule"></div>
+          <p style="color: var(--muted); font-size: 14px; margin: 20px auto 0;">Alguns dos espaços e eventos que já receberam o Grupo Lado Bom.</p>
+        </div>
+        <div class="venue-grid">
+          <a class="venue-card reveal" href="https://www.instagram.com/quintaldosamigos/" target="_blank" rel="noopener noreferrer" aria-label="Abrir Instagram de Quintal dos Amigos">Quintal dos Amigos</a>
+          <a class="venue-card reveal" href="https://www.instagram.com/viladosambasp/" target="_blank" rel="noopener noreferrer" aria-label="Abrir Instagram de Vila do Samba">Vila do Samba</a>
+          <a class="venue-card reveal" href="https://www.instagram.com/rosasdeouro/" target="_blank" rel="noopener noreferrer" aria-label="Abrir Instagram de Rosas de Ouro">Rosas de Ouro</a>
+          <a class="venue-card reveal" href="https://www.instagram.com/oficialbardomajor/" target="_blank" rel="noopener noreferrer" aria-label="Abrir Instagram de Bar do Major">Bar do Major</a>
+          <a class="venue-card reveal" href="https://www.instagram.com/_baguncinhafest/" target="_blank" rel="noopener noreferrer" aria-label="Abrir Instagram de Baguncinha Fest">Baguncinha Fest</a>
+          <a class="venue-card reveal" href="https://www.instagram.com/loirassabar/" target="_blank" rel="noopener noreferrer" aria-label="Abrir Instagram de Loirassa Bar">Loirassa Bar</a>
+          <a class="venue-card reveal" href="https://www.instagram.com/tatubola.bar/" target="_blank" rel="noopener noreferrer" aria-label="Abrir Instagram de Rede Tatu Bola">Rede Tatu Bola</a>
+          <a class="venue-card reveal" href="https://www.instagram.com/reserva.rooftop/" target="_blank" rel="noopener noreferrer" aria-label="Abrir Instagram de Reserva Rooftop">Reserva Rooftop</a>
+          <a class="venue-card reveal" href="https://www.instagram.com/genuinobar/" target="_blank" rel="noopener noreferrer" aria-label="Abrir Instagram de Genuino">Genuino</a>
+        </div>
+        <p class="venue-note reveal">E muitos outros encontros, palcos e histórias.</p>
+      </div>
+    </section>
+
+    <section class="section" id="shows">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Escolha a formação</span>
+          <h2>Formatos de Shows</h2>
+          <div class="rule"></div>
+        </div>
+        <div class="format-grid">
+          <article class="format-card reveal">
+            <div class="format-number">01</div>
+            <h3>Banda Reduzida</h3>
+            <p>Uma formação mais compacta, ideal para eventos que pedem um formato enxuto, mantendo a identidade e a energia do Grupo Lado Bom.</p>
+          </article>
+          <article class="format-card reveal">
+            <div class="format-number">02</div>
+            <h3>Banda Completa</h3>
+            <p>Uma apresentação com a formação completa do grupo, levando ao evento toda a presença e vibração do Lado Bom.</p>
+          </article>
+        </div>
+        <p class="format-note">Shows com duração aproximada de 2 a 3 horas. Consulte disponibilidade e valores.</p>
+      </div>
+    </section>
+
+    <section class="section alt" id="redes">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Acompanhe</span>
+          <h2>Redes Sociais</h2>
+          <div class="rule"></div>
+        </div>
+        <div class="social-grid reveal">
+          <a class="social-link" href="https://www.instagram.com/ogrupoladobom/" target="_blank" rel="noopener noreferrer" aria-label="Instagram do Grupo Lado Bom">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg>
+            Instagram
+          </a>
+          <a class="social-link" href="https://www.tiktok.com/@grupo.lado.bom" target="_blank" rel="noopener noreferrer" aria-label="TikTok do Grupo Lado Bom">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.6 7.1a5.4 5.4 0 0 1-3.3-1.1 5.5 5.5 0 0 1-1.9-3.2H11v13.1a2.7 2.7 0 1 1-2.7-2.7c.3 0 .6 0 .9.1V9.9a7.2 7.2 0 1 0 5.2 6.9V10a8.7 8.7 0 0 0 5.2 1.7V7.1Z"/></svg>
+            TikTok
+          </a>
+          <a class="social-link" href="https://www.youtube.com/@GrupoLadoBom" target="_blank" rel="noopener noreferrer" aria-label="YouTube do Grupo Lado Bom">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.6 3.6 12 3.6 12 3.6s-7.6 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.8.5 9.4.5 9.4.5s7.6 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.3 3.6-6.3 3.6Z"/></svg>
+            YouTube
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contato">
+      <span class="eyebrow">Contratação</span>
+      <h2>Leve o Grupo Lado Bom para o seu evento</h2>
+      <p>Entre em contato para consultar disponibilidade de agenda, formatos de show e valores.</p>
+      <a class="button button-gold" href="https://wa.me/5511992122296?text=Ol%C3%A1!%20Vi%20o%20Press%20Kit%20Digital%20do%20Grupo%20Lado%20Bom%20e%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20contrata%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.86 11.86 0 0 0 12.08 0C5.5 0 .15 5.35.15 11.93c0 2.1.55 4.15 1.6 5.96L.05 24l6.27-1.65a11.9 11.9 0 0 0 5.75 1.47h.01c6.58 0 11.93-5.35 11.93-11.93 0-3.19-1.24-6.19-3.49-8.41ZM12.08 21.8h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.72.98.99-3.63-.24-.37a9.88 9.88 0 0 1-1.52-5.26c0-5.47 4.45-9.92 9.91-9.92 2.65 0 5.14 1.03 7.01 2.91a9.86 9.86 0 0 1 2.9 7.01c0 5.47-4.45 9.87-9.92 9.87Z"/></svg>
+        Falar pelo WhatsApp
+      </a>
+      <span class="whatsapp-line">(11) 99212-2296</span>
+    </section>
+  </main>
+
+  <footer>© <span id="year">2026</span> <strong>Grupo Lado Bom</strong> • O Lado B do Samba</footer>
+  <script>
+    // Pequenas animações de entrada; o conteúdo continua visível mesmo sem JavaScript.
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const items = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      items.forEach((item) => observer.observe(item));
+    } else {
+      items.forEach((item) => item.classList.add('visible'));
+    }
+  </script>
+</body>
+</html>
